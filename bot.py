@@ -96,6 +96,7 @@ driver.find_element(By.XPATH, "//*[text()='Refresh']").click()
 time.sleep(5)
 driver.find_element(By.XPATH, "//*[text()='FB-Facebook confirmation code']").click()
 time.sleep(3)
+act=ActionChains(driver)
 act.key_down(Keys.TAB).key_up(Keys.TAB).perform()
 act.key_down(Keys.TAB).key_up(Keys.TAB).perform()
 act.key_down(Keys.TAB).key_up(Keys.TAB).perform()
@@ -118,4 +119,3 @@ time.sleep(5)
 with open("Output.txt", "a") as text_file:
     print(f"{text}:{password}", file=text_file)
 driver.quit()
-
